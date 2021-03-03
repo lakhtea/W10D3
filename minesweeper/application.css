@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 330px;
+  height: 310px;
+  list-style: none;
+  margin-top: 200px;
+  padding: 0;
+  border: 2px solid black;
+}
+
+.row {
+  grid-row: auto;
+}
+
+.tile {
+  grid-column: auto;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  padding-top: 2px;
+  border: 1px solid gray;
+}
+
+.bombed {
+  background-image: url("./bomb.jpg");
+  display: block; /* remove extra space below image */
+  height: 30px;
+  width: 30px;
+}
+
+.flagged {
+}
+
+.revealed {
+}
