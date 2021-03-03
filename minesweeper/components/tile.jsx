@@ -16,14 +16,15 @@ class Tile extends React.Component {
   }
 
   render() {
-    if (this.props.tile.explored) {
+    if (this.props.tile.explored && this.props.tile.bombed) {
+      // alert("sorry we are closed!");
+      return <div className="tile bombed"></div>;
+    } else if (this.props.tile.explored) {
       return (
         <div className="tile revealed">
           {this.props.tile.adjacentBombCount()}
         </div>
       );
-    } else if (this.props.tile.bombed) {
-      return <div className="tile">💣</div>;
     } else if (this.props.tile.flagged) {
       return (
         <div onClick={this.handleClick} className="tile flagged">
@@ -32,11 +33,11 @@ class Tile extends React.Component {
       );
     } else
       return (
-        <div onClick={this.handleClick} className="tile">
-          T
-        </div>
+        <div onClick={this.handleClick} className="tile"></div>
       );
   }
 }
 
 export default Tile;
+
+// 💣

@@ -6,6 +6,7 @@ body {
   text-align: center;
   margin: auto;
   font-family: sans-serif;
+  background-image: url("./cool.gif");
 }
 
 .board {
@@ -18,6 +19,7 @@ body {
   margin-top: 200px;
   padding: 0;
   border: 2px solid black;
+  background-color: pink;
 }
 
 .row {
@@ -31,6 +33,7 @@ body {
   margin: auto;
   padding-top: 2px;
   border: 1px solid gray;
+  cursor: pointer;
 }
 
 .bombed {
@@ -40,8 +43,55 @@ body {
   width: 30px;
 }
 
-.flagged {
+.form {
+  margin: auto;
 }
 
-.revealed {
+.form p {
+  font-size: 2rem;
+}
+
+.restart {
+  border: 2px solid pink;
+  color: purple;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.modal-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-form {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  height: 33%;
+  width: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: salmon;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
+  color: aliceblue;
+  border: 2px solid pink;
+}
+
+.is-open {
+  display: block;
+}
+
+#solbass {
+  padding-top: 50px;
+  color: white;
 }
